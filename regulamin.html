@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#09090b">
+
+  <title>Regulamin | Shine &amp; Splash</title>
+  <meta name="description" content="Regulamin serwisu Shine &amp; Splash — zasady korzystania z serwisu oraz świadczenia mobilnych usług detailingu samochodowego.">
+  <meta name="author" content="Inne — Shine &amp; Splash">
+  <link rel="canonical" href="https://shineandsplash.pl/regulamin.html">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary: #3a3cdf;
+      --secondary: #158ec6;
+      --accent: #f59e0b;
+      --background: #09090b;
+      --text: #fafafa;
+      --muted: #a1a1aa;
+      --surface: #111116;
+      --line: rgba(250,250,250,.13);
+      --blue-glow: rgba(58,60,223,.28);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--background);
+      color: var(--text);
+      font-family: "Manrope", sans-serif;
+      overflow-x: hidden;
+    }
+    body::before {
+      content: "";
+      position: fixed; inset: 0; pointer-events: none; opacity: .04; z-index: 10;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.8'/%3E%3C/svg%3E");
+    }
+    ::selection { background: var(--accent); color: #111; }
+    ::-webkit-scrollbar { width: 9px; }
+    ::-webkit-scrollbar-track { background: var(--background); }
+    ::-webkit-scrollbar-thumb { background: var(--primary); border-radius: 10px; }
+    a { color: inherit; text-decoration: none; }
+    .container { width: min(1160px, calc(100% - 48px)); margin: auto; }
+    .eyebrow {
+      display: flex; align-items: center; gap: 10px; color: var(--accent);
+      font: 500 .72rem "DM Mono", monospace; text-transform: uppercase; letter-spacing: .12em;
+    }
+    .eyebrow::before { content: ""; width: 30px; height: 1px; background: var(--accent); }
+
+    header {
+      position: fixed; z-index: 20; top: 0; left: 0; width: 100%; padding: 13px 0;
+      background: rgba(9,9,11,.82); backdrop-filter: blur(18px); border-bottom: 1px solid var(--line);
+      transition: .35s ease;
+    }
+    .nav { display: flex; align-items: center; justify-content: space-between; }
+    .logo { font-size: 1.35rem; font-weight: 800; letter-spacing: -.08em; }
+    .logo span { color: var(--accent); }
+    .nav-links { display: flex; gap: 30px; align-items: center; font-size: .8rem; color: #d4d4d8; }
+    .nav-links a { transition: color .25s, transform .25s; }
+    .nav-links a:hover { color: var(--accent); transform: translateY(-2px); }
+    .nav-cta { border: 1px solid var(--line); padding: 10px 15px; border-radius: 2px; }
+    .nav-cta:hover { border-color: var(--accent); }
+    .menu { display:none; background:none; color:white; border:0; font-size:1.5rem; cursor:pointer; }
+
+    main { position: relative; min-height: calc(100vh - 100px); }
+    section { padding: 135px 0; }
+    .legal-page {
+      background:
+        radial-gradient(ellipse at 100% 0%, rgba(58,60,223,.12), transparent 36%),
+        linear-gradient(145deg, #10101a, #09090b 70%);
+      scroll-margin-top: 72px;
+      min-height: 100vh;
+      padding-top: 165px;
+    }
+    .legal-wrap { max-width: 900px; }
+    .legal-kicker { color:var(--accent); font: .7rem "DM Mono"; letter-spacing:.12em; text-transform:uppercase; }
+    .legal-page h1 { font-size:clamp(2.7rem, 6vw, 5rem); letter-spacing:-.08em; line-height:.98; margin:20px 0 18px; }
+    .legal-updated { color:var(--muted); font: .75rem "DM Mono"; margin:0 0 42px; }
+    .legal-content { border-top:1px solid var(--line); padding-top:28px; }
+    .legal-content h2 { color:var(--text); font-size:1.25rem; letter-spacing:-.04em; margin:32px 0 10px; }
+    .legal-content h2:first-child { margin-top:0; }
+    .legal-content p, .legal-content li { color:#c5c5ca; font-size:.92rem; line-height:1.8; }
+    .legal-content p { margin:0 0 14px; }
+    .legal-content ul { padding-left:22px; margin:8px 0 18px; }
+    .legal-content li { padding-left:4px; margin:5px 0; }
+    .legal-content a { color:var(--accent); text-decoration:underline; text-underline-offset:3px; }
+    .legal-return { display:inline-flex; margin-top:34px; color:var(--accent); font: .72rem "DM Mono"; text-transform:uppercase; letter-spacing:.06em; }
+    .legal-return:hover { color:#fff; }
+
+    footer { border-top:1px solid var(--line); padding:32px 0; color:var(--muted); font-size:.75rem; }
+    .footer-wrap { display:flex; justify-content:space-between; gap:20px; }
+    .footer-links { display:flex; gap:22px; }
+    .footer-links a:hover { color:var(--accent); }
+
+    @media (max-width: 800px) {
+      .container { width:min(100% - 34px, 600px); }
+      .nav-links { display:none; position:absolute; top:70px; left:17px; right:17px; background:#111116; padding:25px; flex-direction:column; align-items:flex-start; border:1px solid var(--line); }
+      .nav-links.open { display:flex; }
+      .menu { display:block; }
+      section { padding:90px 0; }
+      .legal-page { padding-top:130px; }
+      .footer-wrap { flex-direction:column; }
+    }
+    @media (max-width: 520px) {
+      .legal-content p, .legal-content li { font-size:.86rem; }
+      .footer-links { flex-wrap:wrap; gap:14px 18px; }
+    }
+  </style>
+</head>
+<body>
+  <header id="header" class="scrolled">
+    <div class="container nav">
+      <a href="index.html" class="logo" aria-label="Shine &amp; Splash — strona główna"><span><font color="#fafafa">Dr. Shine</font>®</span></a>
+      <nav class="nav-links" id="navLinks" aria-label="Główna nawigacja">
+        <a href="index.html#o-nas">O nas</a>
+        <a href="index.html#uslugi">Usługi</a>
+        <a href="index.html#realizacje">Realizacje</a>
+        <a href="index.html#cennik">Cennik</a>
+        <a href="index.html#kontakt" class="nav-cta">Zapytaj o termin ↗</a>
+      </nav>
+      <button class="menu" id="menu" aria-label="Otwórz menu" aria-expanded="false">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="legal-page">
+      <div class="container legal-wrap">
+        <div class="legal-kicker">Informacje prawne / Shine &amp; Splash</div>
+        <h1>Regulamin</h1>
+        <p class="legal-updated">Obowiązuje od 25 września 2026 r.</p>
+
+        <div class="legal-content">
+          <h2>§ 1. Postanowienia ogólne</h2>
+          <p>Niniejszy regulamin określa zasady korzystania z serwisu internetowego Shine &amp; Splash oraz zasady świadczenia przez Inne — Shine &amp; Splash usług mobilnego detailingu samochodowego, w szczególności mycia pojazdów, czyszczenia wnętrz, pielęgnacji i korekty lakieru oraz jego zabezpieczania. Usługi są świadczone z dojazdem do klienta na terenie Łodzi i okolic, po uzgodnieniu dostępności i miejsca wykonania.</p>
+          <p>W sprawach związanych z serwisem lub usługami można skontaktować się telefonicznie pod numerem <a href="tel:+48482038472">+48 482 038 472</a> albo pocztą elektroniczną pod adresem <a href="mailto:drshine@gmail.com">drshine@gmail.com</a>.</p>
+          <p>Regulamin jest udostępniany nieodpłatnie w serwisie w sposób umożliwiający jego odczytanie, zapisanie i odtworzenie. Korzystanie z serwisu oznacza konieczność przestrzegania jego postanowień oraz obowiązujących przepisów prawa.</p>
+          <p>Usługodawca nie udostępnia w serwisie funkcji zakładania konta ani zawierania umowy przez samo wypełnienie formularza. Informacje o usługach i orientacyjnych cenach mają charakter informacyjny i nie stanowią oferty w rozumieniu Kodeksu cywilnego. Zapytanie przesłane przez formularz lub inny kanał kontaktu nie zobowiązuje do zawarcia umowy.</p>
+
+          <h2>§ 2. Ogólne warunki korzystania z serwisu</h2>
+          <p>Serwis można przeglądać bez rejestracji. Do korzystania z niego potrzebne są urządzenie z dostępem do internetu, aktualna przeglądarka internetowa oraz aktywne konto poczty elektronicznej, jeżeli użytkownik chce skontaktować się mailowo.</p>
+          <p>Użytkownik powinien korzystać z serwisu zgodnie z prawem, dobrymi obyczajami i niniejszym regulaminem. Zabronione jest dostarczanie treści bezprawnych, podejmowanie działań zakłócających działanie serwisu lub prób uzyskania nieuprawnionego dostępu do jego zasobów.</p>
+          <p>Usługodawca podejmuje uzasadnione działania, aby serwis działał prawidłowo, zastrzega jednak możliwość czasowej niedostępności związanej z konserwacją, aktualizacją lub przyczynami niezależnymi od Usługodawcy.</p>
+
+          <h2>§ 3. Zasady świadczenia usług</h2>
+          <p>Przed zawarciem umowy strony uzgadniają co najmniej rodzaj i zakres usługi, miejsce oraz proponowany termin jej wykonania, a także cenę albo sposób jej ustalenia. Uzgodnienia mogą być dokonywane telefonicznie, mailowo lub w inny sposób zaakceptowany przez obie strony. Umowa zostaje zawarta po zgodnym potwierdzeniu jej istotnych warunków.</p>
+          <p>Ceny prezentowane w serwisie są cenami orientacyjnymi, określonymi jako ceny „od”. Ostateczna cena może zależeć w szczególności od wielkości i rodzaju pojazdu, jego stanu, zakresu prac oraz warunków wykonania usługi. Usługodawca przedstawia klientowi cenę lub sposób jej obliczenia przed rozpoczęciem prac. Usługa wykraczająca poza wcześniej uzgodniony zakres wymaga uzgodnienia z klientem, w tym zaakceptowania ewentualnej zmiany ceny.</p>
+          <p>Klient powinien zapewnić uzgodniony dostęp do pojazdu oraz poinformować o istotnych okolicznościach mogących mieć wpływ na bezpieczeństwo lub wykonanie usługi, takich jak istniejące uszkodzenia, szczególne zabrudzenia, wcześniejsze naprawy powłoki albo materiały wymagające szczególnego traktowania. Zakres możliwego efektu jest zależny od stanu pojazdu; Usługodawca nie gwarantuje usunięcia każdej rysy, plamy ani innego śladu zużycia, jeżeli nie jest to możliwe lub bezpieczne w ramach uzgodnionej usługi.</p>
+          <p>Klient może poprosić o zmianę terminu lub zrezygnować z uzgodnionej wizyty, kontaktując się z Usługodawcą możliwie niezwłocznie. Ewentualne skutki prawne rezygnacji z umowy zawartej poza lokalem przedsiębiorstwa, w tym prawo odstąpienia, określają przepisy prawa i § 5 niniejszego regulaminu.</p>
+
+          <h2>§ 4. Prawa i obowiązki stron</h2>
+          <p>Usługodawca zobowiązuje się wykonać uzgodnioną usługę z należytą starannością, przy użyciu metod i środków odpowiednich do uzgodnionego zakresu oraz stanu pojazdu. Przed rozpoczęciem prac informuje klienta o istotnej zmianie zakresu lub ceny i uzyskuje jego akceptację.</p>
+          <p>Klient zobowiązuje się współpracować przy realizacji usługi, udostępnić pojazd w uzgodnionym miejscu i terminie oraz przekazać informacje istotne dla prawidłowego wykonania prac. Klient powinien usunąć z pojazdu przedmioty wartościowe i rzeczy osobiste, o ile strony nie uzgodnią inaczej.</p>
+          <p>Każda ze stron może zwrócić się do drugiej strony o wyjaśnienie wątpliwości dotyczących uzgodnionej usługi. Postanowienia regulaminu nie wyłączają ani nie ograniczają praw konsumenta wynikających z bezwzględnie obowiązujących przepisów prawa.</p>
+
+          <h2>§ 5. Prawo odstąpienia od umowy</h2>
+          <p>Jeżeli klient będący konsumentem zawarł umowę na odległość lub poza lokalem przedsiębiorstwa, co do zasady przysługuje mu prawo odstąpienia od umowy w terminie 14 dni, bez podawania przyczyny, na zasadach określonych w ustawie z 30 maja 2014 r. o prawach konsumenta. Termin oraz sposób skorzystania z tego prawa zależą od okoliczności zawarcia umowy. Aby skorzystać z prawa odstąpienia, konsument może złożyć jednoznaczne oświadczenie, na przykład wysyłając je na adres e-mail wskazany w § 1. Może, ale nie musi, skorzystać z ustawowego wzoru formularza odstąpienia.</p>
+          <p>Jeżeli konsument zażąda rozpoczęcia świadczenia usługi przed upływem terminu do odstąpienia, Usługodawca uzyskuje wymagane prawem wyraźne żądanie konsumenta oraz potwierdzenie, że konsument przyjmuje do wiadomości skutki rozpoczęcia świadczenia. W razie odstąpienia po takim żądaniu konsument może być zobowiązany do zapłaty za świadczenia spełnione do chwili odstąpienia, proporcjonalnie do zakresu wykonanej usługi, zgodnie z przepisami prawa.</p>
+          <p>Prawo odstąpienia może nie przysługiwać w przypadkach przewidzianych w ustawie o prawach konsumenta, w tym po pełnym wykonaniu usługi, jeżeli spełnianie rozpoczęto za wyraźną i uprzednią zgodą konsumenta, który przed rozpoczęciem został poinformowany o utracie prawa odstąpienia i przyjął to do wiadomości. Zastosowanie wyjątku zależy od spełnienia wszystkich wymogów ustawowych.</p>
+
+          <h2>§ 6. Reklamacje</h2>
+          <p>Klient może zgłosić zastrzeżenia dotyczące wykonanej usługi, kontaktując się z Usługodawcą telefonicznie lub mailowo, na dane wskazane w § 1. Dla sprawniejszego rozpatrzenia zgłoszenie powinno zawierać dane pozwalające zidentyfikować klienta i usługę, opis zastrzeżeń oraz — jeżeli to pomocne — dokumentację, na przykład zdjęcia. Brak tych informacji nie pozbawia klienta praw wynikających z przepisów prawa.</p>
+          <p>Reklamacja zostanie rozpatrzona w terminie wymaganym przez obowiązujące przepisy. Jeżeli w danej sprawie zastosowanie ma ustawowy termin 14 dni na udzielenie odpowiedzi na reklamację konsumenta, Usługodawca udzieli odpowiedzi w tym terminie. Odpowiedź zostanie przekazana na podany przez klienta adres e-mail lub w inny uzgodniony sposób.</p>
+          <p>Postanowienia regulaminu nie ograniczają uprawnień klienta wynikających z przepisów o odpowiedzialności za nienależyte wykonanie zobowiązania ani innych przepisów chroniących konsumentów. Klient będący konsumentem może również skorzystać z pozasądowych sposobów rozpatrywania sporów i dochodzenia roszczeń, w tym zwrócić się o pomoc do właściwego miejscowo wojewódzkiego inspektora Inspekcji Handlowej. Informacje o dostępnych procedurach są udostępniane przez właściwe instytucje publiczne.</p>
+
+          <h2>§ 7. Postanowienia końcowe</h2>
+          <p>W sprawach nieuregulowanych regulaminem zastosowanie mają przepisy prawa polskiego, w szczególności Kodeksu cywilnego oraz ustawy o prawach konsumenta. W przypadku sprzeczności postanowień regulaminu z bezwzględnie obowiązującymi przepisami prawa zastosowanie mają te przepisy.</p>
+          <p>Usługodawca może zmienić regulamin z ważnych przyczyn, w szczególności w razie zmiany przepisów prawa, sposobu działania serwisu lub zakresu oferowanych usług. Zmiana nie narusza praw nabytych klientów ani warunków umów zawartych przed jej wejściem w życie. Aktualna wersja regulaminu jest publikowana w serwisie.</p>
+          <p>Regulamin obowiązuje od 25 września 2026 r.</p>
+        </div>
+
+        <a class="legal-return" href="index.html">← Wróć na stronę główną</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-wrap">
+      <div>© 2026 Dr. Shine — mobilny detailing samochodów</div>
+      <div class="footer-links">
+        <a href="polityka-prywatnosci.html">Polityka prywatności</a>
+        <a href="regulamin.html">Regulamin</a>
+        <a href="index.html#kontakt">Kontakt</a>
+        <a href="index.html">Strona główna ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const header = document.getElementById('header');
+    const menu = document.getElementById('menu');
+    const nav = document.getElementById('navLinks');
+
+    window.addEventListener('scroll', () => {
+      header.classList.toggle('scrolled', window.scrollY > 30);
+    });
+
+    menu.addEventListener('click', () => {
+      const isOpen = nav.classList.toggle('open');
+      menu.setAttribute('aria-expanded', String(isOpen));
+    });
+
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        nav.classList.remove('open');
+        menu.setAttribute('aria-expanded', 'false');
+      });
+    });
+  </script>
+</body>
+</html>

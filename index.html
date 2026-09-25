@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#09090b">
+
+  <title>Mobilny detailing samochodów w Łodzi | Dr. shine</title>
+  <meta name="description" content="Mobilny detailing samochodów w Łodzi. Profesjonalne mycie, czyszczenie wnętrza, polerowanie i zabezpieczenie lakieru z dojazdem do klienta. Shine &amp; Splash.">
+  <meta name="keywords" content="detailing samochodowy Łódź, mobilny detailing Łódź, czyszczenie samochodu Łódź, polerowanie samochodu Łódź, zabezpieczenie lakieru, Shine and Splash">
+  <meta name="author" content="Inne — Shine &amp; Splash">
+  <link rel="canonical" href="https://shineandsplash.pl/">
+
+  <meta property="og:title" content="Mobilny detailing samochodów w Łodzi | Shine &amp; Splash">
+  <meta property="og:description" content="Twój samochód. Nasza trasa. Profesjonalny detailing z dojazdem na terenie miasta Łódź.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://shineandsplash.pl/">
+  <meta property="og:locale" content="pl_PL">
+  <meta property="og:site_name" content="Shine &amp; Splash">
+  <meta property="og:image" content="assets/obraz_2026-09-24_141417408.png">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Mobilny detailing samochodów w Łodzi | Shine &amp; Splash">
+  <meta name="twitter:description" content="Profesjonalny mobilny detailing samochodów z dojazdem na terenie Łodzi.">
+  <meta name="twitter:image" content="assets/obraz_2026-09-24_141417408.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary: #3a3cdf;
+      --secondary: #158ec6;
+      --accent: #f59e0b;
+      --background: #09090b;
+      --text: #fafafa;
+      --muted: #a1a1aa;
+      --surface: #111116;
+      --line: rgba(250,250,250,.13);
+      --blue-glow: rgba(58,60,223,.28);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--background);
+      color: var(--text);
+      font-family: "Manrope", sans-serif;
+      overflow-x: hidden;
+    }
+    body::before {
+      content: "";
+      position: fixed; inset: 0; pointer-events: none; opacity: .04; z-index: 10;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.8'/%3E%3C/svg%3E");
+    }
+    ::selection { background: var(--accent); color: #111; }
+    ::-webkit-scrollbar { width: 9px; }
+    ::-webkit-scrollbar-track { background: var(--background); }
+    ::-webkit-scrollbar-thumb { background: var(--primary); border-radius: 10px; }
+    a { color: inherit; text-decoration: none; }
+    .container { width: min(1160px, calc(100% - 48px)); margin: auto; }
+    .eyebrow {
+      display: flex; align-items: center; gap: 10px; color: var(--accent);
+      font: 500 .72rem "DM Mono", monospace; text-transform: uppercase; letter-spacing: .12em;
+    }
+    .eyebrow::before { content: ""; width: 30px; height: 1px; background: var(--accent); }
+    .reveal { opacity: 0; transform: translateY(28px); transition: opacity .8s ease, transform .8s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    main { position: relative; }
+    main::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: 4;
+      pointer-events: none;
+      opacity: 0;
+      background: radial-gradient(180px circle at var(--cursor-x, -400px) var(--cursor-y, -400px), rgba(58,60,223,.075), rgba(21,142,198,.035) 42%, transparent 75%);
+      mix-blend-mode: screen;
+      transition: opacity .25s ease;
+    }
+    main.cursor-active::after { opacity: 1; }
+
+    header {
+      position: fixed; z-index: 20; top: 0; left: 0; width: 100%; padding: 21px 0;
+      transition: .35s ease;
+    }
+    header.scrolled { padding: 13px 0; background: rgba(9,9,11,.82); backdrop-filter: blur(18px); border-bottom: 1px solid var(--line); }
+    .nav { display: flex; align-items: center; justify-content: space-between; }
+    .logo { font-size: 1.35rem; font-weight: 800; letter-spacing: -.08em; }
+    .logo span { color: var(--accent); }
+    .nav-links { display: flex; gap: 30px; align-items: center; font-size: .8rem; color: #d4d4d8; }
+    .nav-links a { transition: color .25s, transform .25s; }
+    .nav-links a:hover { color: var(--accent); transform: translateY(-2px); }
+    .nav-cta { border: 1px solid var(--line); padding: 10px 15px; border-radius: 2px; }
+    .nav-cta:hover { border-color: var(--accent); }
+    .menu { display:none; background:none; color:white; border:0; font-size:1.5rem; }
+
+    .hero {
+      min-height: 800px; padding-top: 180px; position: relative; overflow: hidden;
+      background: var(--background);
+    }
+    .hero::before {
+      content: ""; position: absolute; inset: 0; z-index: 1; pointer-events: none;
+      background: linear-gradient(90deg, rgba(9,9,11,.88) 0%, rgba(9,9,11,.68) 48%, rgba(9,9,11,.45) 100%), linear-gradient(0deg, rgba(9,9,11,.55), transparent 38%, rgba(9,9,11,.2));
+    }
+    .hero::after {
+      content: ""; position: absolute; width: 560px; height: 560px; right: -230px; top: 100px;
+      z-index: 1; border: 1px solid rgba(245,158,11,.25); border-radius: 50%; box-shadow: 0 0 0 50px rgba(245,158,11,.025), 0 0 0 100px rgba(245,158,11,.02);
+      animation: rotate 22s linear infinite;
+    }
+    .hero-grid { display: block; position: relative; z-index: 2; }
+    .hero-content { max-width: 750px; }
+    h1 { font-size: clamp(3.6rem, 8.6vw, 7.7rem); line-height: .98; letter-spacing: -.095em; word-spacing: .16em; margin: 25px 0 32px; font-weight: 800; max-width: 780px; }
+    h1 em { color: var(--accent); font-style: normal; display: block; margin-top: 0; }
+    .hero-copy { max-width: 430px; color: #c5c5ca; line-height: 1.7; font-size: 1rem; }
+    .actions { display: flex; gap: 14px; margin-top: 35px; align-items: center; }
+    .btn { position: relative; overflow: hidden; display: inline-flex; align-items: center; gap: 12px; padding: 15px 20px; font-weight: 700; font-size: .82rem; transition: transform .3s, box-shadow .3s; }
+    .btn::before { content:""; position:absolute; inset:0; transform:translateX(-102%); transition:transform .35s; background:var(--accent); z-index:-1; }
+    .btn:hover { transform: translateY(-4px); box-shadow: 0 12px 28px rgba(245,158,11,.2); color:#111; }
+    .btn:hover::before { transform: translateX(0); }
+    .btn-primary { background: var(--primary); z-index: 0; }
+    .btn-ghost { border: 1px solid var(--line); }
+    .hero-image { position: absolute; inset: 0; z-index: 0; pointer-events: none; overflow: hidden; }
+    .hero-image img { width: 100%; height: 100%; object-fit: contain; object-position: center; opacity: .34; filter: saturate(.82) contrast(1.05); }
+    .number { position:absolute; right: 20px; top: 20px; font: 4rem "DM Mono"; color:rgba(255,255,255,.18); }
+
+    .foam-layer { position: absolute; inset: 0; overflow: hidden; pointer-events: none; z-index: 3; }
+    .foam-bubble {
+      position: absolute;
+      width: var(--size);
+      height: var(--size);
+      left: var(--x);
+      top: var(--y);
+      border: 1px solid rgba(255,255,255,.72);
+      border-radius: 50%;
+      background: radial-gradient(circle at 32% 27%, rgba(255,255,255,.72), rgba(255,255,255,.12) 36%, rgba(21,142,198,.12) 72%, rgba(255,255,255,.04));
+      box-shadow: inset -2px -3px 6px rgba(21,142,198,.2), 0 0 12px rgba(255,255,255,.16);
+      animation: foam-rise 1.65s ease-out forwards;
+      will-change: transform, opacity;
+    }
+    .foam-bubble::after {
+      content: "";
+      position: absolute;
+      width: 24%;
+      height: 17%;
+      left: 21%;
+      top: 18%;
+      border-radius: 50%;
+      background: rgba(255,255,255,.85);
+      filter: blur(1px);
+      transform: rotate(-35deg);
+    }
+
+    .ticker { border-block: 1px solid var(--line); padding: 20px 0; overflow:hidden; color:#a1a1aa; font: .72rem "DM Mono"; text-transform:uppercase; letter-spacing:.14em; }
+    .ticker-track { display:flex; width:max-content; white-space:nowrap; animation: ticker 28s linear infinite; }
+    .ticker-group { display:flex; flex:none; align-items:center; gap:54px; padding-right:54px; }
+    .ticker b { color:var(--accent); font-weight:400; }
+
+    section { padding: 135px 0; }
+    .story { display:grid; grid-template-columns: .75fr 1.25fr; gap:100px; }
+    h2 { font-size: clamp(2.5rem, 5.2vw, 5.3rem); letter-spacing:-.08em; line-height:.94; margin: 20px 0 28px; max-width: 700px; }
+    .story-text { font-size:1.25rem; line-height:1.55; max-width: 580px; color:#d4d4d8; }
+    .story-text strong { color:var(--text); }
+    .story-aside { border-left: 1px solid var(--accent); padding-left: 22px; color:var(--muted); line-height:1.7; margin-top: 23px; }
+    .stats { display:flex; gap:55px; margin-top:55px; }
+    .stat strong { display:block; font-size:2.8rem; letter-spacing:-.08em; color:var(--accent); }
+    .stat span { font: .68rem "DM Mono"; color:var(--muted); text-transform:uppercase; }
+
+    .service-section { background: #10101a; position:relative; }
+    .service-intro { display:flex; justify-content:space-between; align-items:end; margin-bottom:50px; }
+    .service-intro h2 { letter-spacing: -.045em; word-spacing: .035em; line-height: 1.12; }
+    .service-intro p { color:var(--muted); max-width:360px; line-height:1.7; }
+    .services { display:grid; grid-template-columns:repeat(3, 1fr); gap:16px; }
+    .service { min-height:300px; background:var(--surface); padding:30px; display:flex; flex-direction:column; justify-content:space-between; transition:background .3s, transform .3s, border-color .3s; border:1px solid var(--line); border-top:3px solid var(--primary); position:relative; isolation:isolate; overflow:hidden; }
+    .service > * { position:relative; z-index:2; }
+    .service:nth-child(2) { transform:none; background:var(--surface); border-top-color:var(--accent); }
+    .service:nth-child(3) { border-top-color:var(--secondary); }
+    .service:hover { transform:translateY(-6px); background:#171720; }
+    .service:nth-child(2):hover { transform:translateY(-6px); background:#171720; }
+    .service-num { font: .72rem "DM Mono"; color:var(--accent); letter-spacing:.08em; }
+    .service h3 { font-size:1.55rem; letter-spacing:-.05em; margin:24px 0 10px; }
+    .service p { color:#d1d1d6; line-height:1.65; font-size:.88rem; margin:0; }
+    .service-list { list-style:none; margin:18px 0 0; padding:0; display:grid; gap:9px; color:#bdbdc5; font-size:.8rem; line-height:1.5; }
+    .service-list li { display:flex; gap:9px; align-items:flex-start; }
+    .service-list li::before { content:"✓"; color:var(--accent); font-weight:700; }
+    .service-arrow { font-size:1.4rem; align-self:end; color:var(--accent); margin-top:20px; }
+
+    .portfolio { background:var(--background); }
+    .portfolio-head { display:flex; justify-content:space-between; align-items:start; }
+    .portfolio-head p { max-width:280px; line-height:1.6; color:var(--muted); }
+    .gallery { display:grid; grid-template-columns: 1.2fr .8fr 1fr; grid-template-rows: 250px 180px; gap:14px; margin-top:55px; }
+    .gallery figure { overflow:hidden; margin:0; position:relative; background:#15151a; }
+    .gallery figure:first-child { grid-row:span 2; }
+    .gallery figure:last-child { grid-column:span 2; }
+    .gallery img { width:100%; height:100%; object-fit:cover; transition:transform .7s, filter .7s; }
+    .gallery figure:hover img { transform:scale(1.09); filter:brightness(.65); }
+    .gallery figcaption { display:none; }
+
+    .pricing {
+      background:
+        radial-gradient(ellipse at 95% 0%, rgba(58,60,223,.16), transparent 38%),
+        linear-gradient(135deg, #111116, #09090b 72%);
+      color:var(--text);
+      position:relative;
+      overflow:hidden;
+    }
+    .pricing-wrap { display:grid; grid-template-columns:.85fr 1.15fr; gap:80px; align-items:start; }
+    .pricing .eyebrow { color:var(--accent); }
+    .pricing .eyebrow::before { background:var(--accent); }
+    .pricing h2 { color:var(--text); font-size:clamp(2.7rem, 4.8vw, 4.8rem); }
+    .pricing-note { max-width:390px; line-height:1.75; font-size:.95rem; color:#bdbdc5; }
+    .pricing-note strong { color:var(--text); }
+    .pricing-label { display:flex; align-items:center; justify-content:space-between; gap:16px; margin-bottom:14px; color:var(--muted); font: .68rem "DM Mono"; letter-spacing:.1em; text-transform:uppercase; }
+    .pricing-label span:last-child { color:var(--accent); }
+    .price-list { display:grid; gap:10px; }
+    .price-row {
+      display:grid;
+      grid-template-columns:44px 1fr auto;
+      gap:17px;
+      align-items:center;
+      min-height:88px;
+      padding:16px 20px;
+      border:1px solid var(--line);
+      border-left:3px solid rgba(245,158,11,.55);
+      background:rgba(255,255,255,.035);
+      transition:transform .25s ease, border-color .25s ease, background .25s ease;
+    }
+    .price-row:hover { transform:translateX(5px); border-color:rgba(245,158,11,.55); background:rgba(255,255,255,.065); }
+    .price-index { color:#777780; font: .7rem "DM Mono"; }
+    .price-name { font-weight:700; font-size:.95rem; }
+    .price-description { margin-top:5px; color:var(--muted); font-size:.76rem; line-height:1.5; }
+    .price-value { color:var(--accent); font:500 1.05rem "DM Mono"; white-space:nowrap; }
+    .pricing-footnote { margin:17px 0 0; color:#85858e; font-size:.75rem; line-height:1.6; }
+
+    .contact { background:linear-gradient(120deg, #10101b, #09090b); }
+    .contact-grid { display:grid; grid-template-columns: .85fr 1.15fr; gap:72px; align-items:start; }
+    .contact-info {
+      padding:34px;
+      border:1px solid var(--line);
+      border-top:3px solid var(--accent);
+      background:linear-gradient(145deg, rgba(255,255,255,.055), rgba(255,255,255,.018));
+    }
+    .contact-info h2 { font-size:clamp(2.5rem, 4.5vw, 4.4rem); }
+    .contact-info > p { color:#d0d0d5; line-height:1.75; max-width:430px; margin:0; }
+    .contact-details { margin-top:32px; display:grid; gap:10px; }
+    .contact-details > div {
+      padding:15px 17px;
+      border:1px solid rgba(250,250,250,.1);
+      background:rgba(9,9,11,.35);
+    }
+    .contact-details small { display:block; color:var(--accent); font: .65rem "DM Mono"; text-transform:uppercase; letter-spacing:.08em; margin-bottom:7px; }
+    .contact-details a, .contact-details span { font-size:1rem; color:#fafafa; }
+    .contact-details a { display:inline-block; transition:color .2s; }
+    .contact-details a:hover { color:var(--accent); }
+    form {
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:22px;
+      padding:34px;
+      border:1px solid var(--line);
+      background:rgba(17,17,22,.78);
+    }
+    .form-intro { grid-column:1/-1; padding-bottom:5px; }
+    .form-intro h3 { margin:0 0 8px; font-size:1.35rem; letter-spacing:-.04em; }
+    .form-intro p { margin:0; color:var(--muted); font-size:.85rem; line-height:1.6; }
+    label { font: .68rem "DM Mono"; color:#c4c4cc; text-transform:uppercase; letter-spacing:.04em; }
+    input, textarea, select { display:block; width:100%; margin-top:8px; background:rgba(255,255,255,.025); border:1px solid rgba(250,250,250,.14); border-radius:2px; padding:13px 12px; color:var(--text); font: .9rem "Manrope"; outline:0; transition:border-color .25s, background .25s; }
+    input::placeholder, textarea::placeholder { color:#777780; }
+    select option { background:#111116; }
+    input:focus, textarea:focus, select:focus { border-color:var(--accent); background:rgba(255,255,255,.045); }
+    textarea { min-height:120px; resize:vertical; }
+    .full { grid-column:1/-1; }
+    form .btn { border:0; cursor:pointer; margin-top:2px; justify-self:start; }
+
+    .legal-page {
+      background:
+        radial-gradient(ellipse at 100% 0%, rgba(58,60,223,.12), transparent 36%),
+        linear-gradient(145deg, #10101a, #09090b 70%);
+      scroll-margin-top: 72px;
+    }
+    .legal-wrap { max-width: 900px; }
+    .legal-kicker { color:var(--accent); font: .7rem "DM Mono"; letter-spacing:.12em; text-transform:uppercase; }
+    .legal-page h2 { font-size:clamp(2.7rem, 6vw, 5rem); margin-bottom:18px; }
+    .legal-updated { color:var(--muted); font: .75rem "DM Mono"; margin:0 0 42px; }
+    .legal-content { border-top:1px solid var(--line); padding-top:28px; }
+    .legal-content h3 { color:var(--text); font-size:1.25rem; letter-spacing:-.04em; margin:32px 0 10px; }
+    .legal-content p, .legal-content li { color:#c5c5ca; font-size:.92rem; line-height:1.8; }
+    .legal-content p { margin:0 0 14px; }
+    .legal-content ul { padding-left:22px; margin:8px 0 18px; }
+    .legal-content li { padding-left:4px; margin:5px 0; }
+    .legal-content a { color:var(--accent); text-decoration:underline; text-underline-offset:3px; }
+    .legal-return { display:inline-flex; margin-top:34px; color:var(--accent); font: .72rem "DM Mono"; text-transform:uppercase; letter-spacing:.06em; }
+    .legal-return:hover { color:#fff; }
+
+    footer { border-top:1px solid var(--line); padding:32px 0; color:var(--muted); font-size:.75rem; }
+    .footer-wrap { display:flex; justify-content:space-between; gap:20px; }
+    .footer-links { display:flex; gap:22px; }
+    .footer-links a:hover { color:var(--accent); }
+
+    @keyframes ticker { to { transform:translateX(-50%); } }
+    @keyframes rotate { to { transform:rotate(360deg); } }
+    @keyframes foam-rise {
+      0% { opacity: 0; transform: translate(-50%, -50%) scale(.35); }
+      18% { opacity: .85; }
+      100% { opacity: 0; transform: translate(calc(-50% + var(--drift)), calc(-50% - var(--rise))) scale(1.1); }
+    }
+
+    @media (max-width: 800px) {
+      .container { width:min(100% - 34px, 600px); }
+      .nav-links { display:none; position:absolute; top:70px; left:17px; right:17px; background:#111116; padding:25px; flex-direction:column; align-items:flex-start; border:1px solid var(--line); }
+      .nav-links.open { display:flex; }
+      .menu { display:block; }
+      .hero { padding-top:140px; min-height:auto; padding-bottom:90px; }
+      .hero::before { background: linear-gradient(90deg, rgba(9,9,11,.82), rgba(9,9,11,.58)), linear-gradient(0deg, rgba(9,9,11,.55), transparent 55%); }
+      .hero::after { width:min(70vw, 420px); height:min(70vw, 420px); right:-150px; box-shadow:0 0 0 35px rgba(245,158,11,.025), 0 0 0 70px rgba(245,158,11,.02); }
+      .hero-image img { object-position: center; }
+      .story, .pricing-wrap, .contact-grid { grid-template-columns:1fr; gap:45px; }
+      .story { gap:20px; }
+      .story-aside { margin-top:25px; }
+      section { padding:90px 0; }
+      .service-intro, .portfolio-head { display:block; }
+      .services { grid-template-columns:1fr; gap:12px; }
+      .service, .service:nth-child(2) { min-height:280px; transform:none; }
+      .service:hover, .service:nth-child(2):hover { transform:translateY(-5px); }
+      .gallery { grid-template-columns:1fr 1fr; grid-template-rows:220px 180px 180px; }
+      .gallery figure:first-child { grid-row:auto; grid-column:span 2; }
+      .gallery figure:last-child { grid-column:span 2; }
+      .stats { gap:22px; flex-wrap:wrap; }
+      form { grid-template-columns:1fr; }
+      .full, .form-intro { grid-column:auto; }
+      .footer-wrap { flex-direction:column; }
+    }
+
+    @media (max-width: 520px) {
+      .hero::after { width:min(68vw, 330px); height:min(68vw, 330px); right:-120px; box-shadow:0 0 0 25px rgba(245,158,11,.025), 0 0 0 50px rgba(245,158,11,.02); }
+      .pricing-wrap { gap:32px; }
+      .price-row { grid-template-columns:30px 1fr; gap:10px 12px; padding:15px; }
+      .price-value { grid-column:2; grid-row:2; font-size:.95rem; }
+      .price-name { font-size:.88rem; }
+      .price-description { font-size:.72rem; }
+      .contact-info, form { padding:23px; }
+      .contact-grid { gap:24px; }
+      .contact-details a, .contact-details span { font-size:.9rem; }
+      .legal-content p, .legal-content li { font-size:.86rem; }
+      .footer-links { flex-wrap:wrap; gap:14px 18px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .foam-bubble { animation-duration: .01ms; }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"LocalBusiness",
+    "name":"Inne — Shine & Splash",
+    "description":"Mobilny detailing samochodów z dojazdem na terenie miasta Łódź.",
+    "url":"https://shineandsplash.pl/",
+    "telephone":"+48 482 038 472",
+    "email":"drshine@gmail.com",
+    "address":{
+      "@type":"PostalAddress",
+      "addressLocality":"Łódź",
+      "addressCountry":"PL"
+    },
+    "areaServed":["Łódź"],
+    "serviceType":[
+      "Mobilny detailing samochodów",
+      "Mycie detailingowe",
+      "Korekta lakieru",
+      "Detailing wnętrza",
+      "Zabezpieczenie lakieru"
+    ],
+    "priceRange":"$$"
+  }
+  </script>
+</head>
+<body>
+  <header id="header" class="scrolled">
+    <div class="container nav">
+      <a href="#start" class="logo"><span><font color="#fafafa">Dr. Shine</font>®</span></a>
+      <nav class="nav-links" id="navLinks" aria-label="Główna nawigacja">
+        <a href="#o-nas">O nas</a>
+        <a href="#uslugi">Usługi</a>
+        <a href="#realizacje">Realizacje</a>
+        <a href="#cennik">Cennik</a>
+        <a href="#kontakt" class="nav-cta">Zapytaj o termin ↗</a>
+      </nav>
+      <button class="menu" id="menu" aria-label="Otwórz menu">☰</button>
+    </div>
+  </header>
+
+  <main class="" style="--cursor-x: 282px; --cursor-y: 2401px;">
+    <section class="hero" id="start">
+      <div class="foam-layer" id="foamLayer" aria-hidden="true"></div>
+      <div class="hero-image" aria-hidden="true">
+        <img src="assets/obraz_2026-09-24_170613953.png" alt="">
+      </div>
+      <div class="container hero-grid">
+        <div class="hero-content reveal visible" style="transition-delay: 0ms;">
+          <div class="eyebrow">Mobilny detailing / Łódź</div>
+          <h1>Perfekcja<br>kryje się w<em>detalach.</em></h1>
+          <div class="actions">
+            <a class="btn btn-primary" href="#kontakt">Umów wizytę <span>↗</span></a>
+            <a class="btn btn-ghost" href="#realizacje">Zobacz efekty</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="ticker" aria-label="Zakres działania">
+      <div class="ticker-track">
+        <div class="ticker-group">
+          <span>Miasto Łódź</span><b>✦</b><span>Detailing mobilny</span><b>✦</b><span>Maszyny profesjonalne</span><b>✦</b><span>Ochrona lakieru</span><b>✦</b><span>Miasto Łódź</span><b>✦</b><span>Detailing mobilny</span><b>✦</b>
+        </div>
+        <div class="ticker-group" aria-hidden="true">
+          <span>Miasto Łódź</span><b>✦</b><span>Detailing mobilny</span><b>✦</b><span>Maszyny profesjonalne</span><b>✦</b><span>Ochrona lakieru</span><b>✦</b><span>Miasto Łódź</span><b>✦</b><span>Detailing mobilny</span><b>✦</b>
+        </div>
+      </div>
+    </div>
+
+    <section class="service-section" id="uslugi">
+      <div class="container">
+        <div class="service-intro reveal visible" style="transition-delay: 0ms;">
+          <div><div class="eyebrow">Zakres prac</div><h2>W czym możemy<br>pomóc?</h2></div>
+          <p>Trzy proste obszary: czyszczenie auta, odświeżenie lakieru i jego ochrona. Wybierz, czego potrzebuje Twój samochód.</p>
+        </div>
+        <div class="services">
+          <article class="service reveal visible" style="transition-delay: 0ms;">
+            <span class="service-num">01 / CZYSZCZENIE</span>
+            <div>
+              <h3>Mycie i wnętrze</h3>
+              <p>Dokładnie czyścimy samochód na zewnątrz i w środku.</p>
+              <ul class="service-list">
+                <li>Mycie nadwozia, felg i szyb</li>
+                <li>Odkurzanie i czyszczenie wnętrza</li>
+              </ul>
+            </div>
+            <span class="service-arrow" aria-hidden="true">↘</span>
+          </article>
+          <article class="service reveal visible" style="transition-delay: 0ms;">
+            <span class="service-num">02 / LAKIER</span>
+            <div>
+              <h3>Odświeżenie lakieru</h3>
+              <p>Poprawiamy wygląd lakieru i przywracamy mu głębię koloru.</p>
+              <ul class="service-list">
+                <li>Polerowanie dobrane do stanu lakieru</li>
+                <li>Redukcja drobnych rys i zmatowień</li>
+              </ul>
+            </div>
+            <span class="service-arrow" aria-hidden="true">↘</span>
+          </article>
+          <article class="service reveal visible" style="transition-delay: 70ms;">
+            <span class="service-num">03 / OCHRONA</span>
+            <div>
+              <h3>Zabezpieczenie auta</h3>
+              <p>Chronimy lakier, żeby łatwiej było utrzymać samochód w czystości.</p>
+              <ul class="service-list">
+                <li>Wosk lub inne zabezpieczenie lakieru</li>
+                <li>Łatwiejsze kolejne mycie samochodu</li>
+              </ul>
+            </div>
+            <span class="service-arrow" aria-hidden="true">↘</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="portfolio" id="realizacje">
+      <div class="container">
+        <div class="portfolio-head reveal visible" style="transition-delay: 0ms;">
+          <div><div class="eyebrow">Portfolio</div><h2>Przed i po.<br>Bez filtrów.</h2></div>
+          <p>Najlepszą wizytówką jest efekt końcowy. Zobacz fragmenty naszych realizacji.</p>
+        </div>
+        <div class="gallery reveal visible" style="transition-delay: 0ms;">
+          <figure><img src="assets/obraz_2026-09-24_141633001.png" alt="Samochód po profesjonalnym detailingu samochodowym w Łodzi"><figcaption>Realizacja / Łódź</figcaption></figure>
+          <figure><img src="assets/obraz_2026-09-24_141706265.png" alt="Detal karoserii samochodu po dokładnym myciu detailingowym"><figcaption>Lakier / detale</figcaption></figure>
+          <figure><img src="assets/obraz_2026-09-24_141745073.png" alt="Czysty samochód po odświeżeniu zewnętrznym"><figcaption>Gotowy na drogę</figcaption></figure>
+          <figure><img src="assets/obraz_2026-09-24_141803558.png" alt="Samochód po zabezpieczeniu i wykończeniu lakieru"><figcaption>Ochrona / wykończenie</figcaption></figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="pricing" id="cennik">
+      <div class="container pricing-wrap">
+        <div class="reveal visible" style="transition-delay: 0ms;">
+          <div class="eyebrow">Cennik orientacyjny</div>
+          <h2>Dobry plan zaczyna się od rozmowy.</h2>
+          <p class="pricing-note">Przejrzyste ceny na start. Ostateczna wycena zależy od wielkości samochodu, stanu powierzchni i zakresu prac — <strong>przed rozpoczęciem zawsze ustalamy ją z Tobą.</strong></p>
+        </div>
+        <div class="reveal visible" style="transition-delay: 0ms;">
+          <div class="pricing-label"><span>Usługa</span><span>|</span></div>
+          <div class="price-list">
+            <div class="price-row">
+              <span class="price-index">01</span>
+              <div><div class="price-name">Mycie detailingowe samochodu</div><div class="price-description">Dokładne mycie nadwozia, felg i szyb.</div></div>
+              <span class="price-value">250 zł</span>
+            </div>
+            <div class="price-row">
+              <span class="price-index">02</span>
+              <div><div class="price-name">Detailing wnętrza</div><div class="price-description">Odkurzanie i staranne czyszczenie wnętrza auta.</div></div>
+              <span class="price-value">350 zł</span>
+            </div>
+            <div class="price-row">
+              <span class="price-index">03</span>
+              <div><div class="price-name">Pakiet wnętrze + nadwozie</div><div class="price-description">Kompleksowe odświeżenie samochodu w środku i na zewnątrz.</div></div>
+              <span class="price-value">450 zł</span>
+            </div>
+            <div class="price-row">
+              <span class="price-index">04</span>
+              <div><div class="price-name">Zabezpieczenie lakieru</div><div class="price-description">Ochrona ułatwiająca utrzymanie auta w czystości.</div></div>
+              <span class="price-value">450 zł</span>
+            </div>
+            <div class="price-row">
+              <span class="price-index">05</span>
+              <div><div class="price-name">Jednoetapowa korekta lakieru</div><div class="price-description">Odświeżenie powierzchni i poprawa głębi koloru.</div></div>
+              <span class="price-value">900 zł</span>
+            </div>
+          </div>
+          <p class="pricing-footnote">Podane kwoty są cenami „od”. Dokładny koszt potwierdzimy po krótkiej konsultacji.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="o-nas">
+      <div class="container story">
+        <div class="reveal">
+          <div class="eyebrow">Dr. Shine</div>
+          <h2>Mobilny detailing w Łodzi.</h2>
+        </div>
+        <div class="reveal">
+          <p class="story-text">Dr. Shine to usługi detailingowe z dojazdem do klienta na terenie Łodzi. Zajmujemy się myciem samochodów, czyszczeniem wnętrz oraz pielęgnacją i korektą lakieru.</p>
+          <p class="story-aside">Przed rozpoczęciem ustalamy zakres prac i wycenę. Dobieramy usługę do stanu samochodu i efektu, na którym Ci zależy.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="kontakt">
+      <div class="container contact-grid">
+        <div class="contact-info reveal">
+          <div class="eyebrow">Zacznijmy</div>
+          <h2>Porozmawiajmy o Twoim samochodzie.</h2>
+          <p>Skontaktuj się z nami telefonicznie lub mailowo. Możesz też wysłać zapytanie przez formularz — podaj lokalizację auta i interesującą Cię usługę, a wrócimy z propozycją terminu.</p>
+          <div class="contact-details">
+            <div><small>Zadzwoń do nas</small><a href="tel:+48482038472">+48 482 038 472</a></div>
+            <div><small>Napisz e-mail</small><a href="mailto:drshine@gmail.com">drshine@gmail.com</a></div>
+            <div><small>Obszar działania</small><span>Łódź i okolice</span></div>
+          </div>
+        </div>
+        <form class="reveal" id="contactForm" aria-label="Formularz kontaktowy">
+          <div class="form-intro">
+            <h3>Wyślij zapytanie</h3>
+            <p>Wypełnij formularz, a skontaktujemy się z Tobą w sprawie usługi i dostępnych terminów.</p>
+          </div>
+          <label>Imię i nazwisko<input type="text" required="" placeholder="Jak się do Ciebie zwracać?"></label>
+          <label>Telefon lub e-mail<input type="text" required="" placeholder="Kontakt zwrotny"></label>
+          <label>Rodzaj usługi<select><option>Wybierz usługę</option><option>Mycie detailingowe</option><option>Korekta lakieru</option><option>Detailing wnętrza</option><option>Zabezpieczenie</option><option>Potrzebuję konsultacji</option></select></label>
+          <label>Lokalizacja<input type="text" placeholder="Gdzie znajduje się samochód?"></label>
+          <label class="full">Wiadomość<textarea placeholder="Napisz kilka słów o samochodzie i oczekiwanym efekcie"></textarea></label>
+          <button class="btn btn-primary" type="submit">Wyślij zapytanie <span>↗</span></button>
+        </form>
+      </div>
+    </section>
+
+    <section id="polityka-prywatnosci" hidden></section>
+    <section id="regulamin" hidden></section>
+  </main>
+
+  <footer>
+    <div class="container footer-wrap">
+      <div>© 2026 Dr. Shine — mobilny detailing samochodów</div>
+      <div class="footer-links"><a href="/polityka-prywatnosci">Polityka prywatności</a><a href="/regulamin">Regulamin</a><a href="#kontakt">Kontakt</a><a href="#start">Na górę ↑</a></div>
+    </div>
+  </footer>
+
+  <script>
+    const header = document.getElementById('header');
+    const menu = document.getElementById('menu');
+    const nav = document.getElementById('navLinks');
+
+    window.addEventListener('scroll', () => {
+      header.classList.toggle('scrolled', window.scrollY > 30);
+    });
+
+    menu.addEventListener('click', () => {
+      nav.classList.toggle('open');
+    });
+
+    document.querySelectorAll('.nav-links a').forEach(a => {
+      a.addEventListener('click', () => nav.classList.remove('open'));
+    });
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+          entry.target.style.transitionDelay = `${Math.min(i * 70, 280)}ms`;
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: .12 });
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    const main = document.querySelector('main');
+    main.addEventListener('pointermove', event => {
+      if (event.pointerType === 'touch') return;
+      const rect = main.getBoundingClientRect();
+      main.style.setProperty('--cursor-x', `${event.clientX - rect.left}px`);
+      main.style.setProperty('--cursor-y', `${event.clientY - rect.top}px`);
+      main.classList.add('cursor-active');
+    });
+    main.addEventListener('pointerleave', () => {
+      main.classList.remove('cursor-active');
+    });
+
+    const hero = document.querySelector('.hero');
+    const foamLayer = document.getElementById('foamLayer');
+    let lastFoamX = 0;
+    let lastFoamY = 0;
+
+    hero.addEventListener('pointermove', event => {
+      if (event.pointerType === 'touch' || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+      const rect = hero.getBoundingClientRect();
+      const x = event.clientX - rect.left;
+      const y = event.clientY - rect.top;
+      const distance = Math.hypot(x - lastFoamX, y - lastFoamY);
+
+      if (distance < 18) return;
+      lastFoamX = x;
+      lastFoamY = y;
+
+      const bubbleCount = Math.random() > .58 ? 2 : 1;
+      for (let i = 0; i < bubbleCount; i++) {
+        const bubble = document.createElement('span');
+        const size = 8 + Math.random() * 19;
+        bubble.className = 'foam-bubble';
+        bubble.style.setProperty('--size', `${size}px`);
+        bubble.style.setProperty('--x', `${x + (Math.random() - .5) * 24}px`);
+        bubble.style.setProperty('--y', `${y + (Math.random() - .5) * 20}px`);
+        bubble.style.setProperty('--drift', `${(Math.random() - .5) * 55}px`);
+        bubble.style.setProperty('--rise', `${55 + Math.random() * 65}px`);
+        foamLayer.appendChild(bubble);
+        bubble.addEventListener('animationend', () => bubble.remove(), { once: true });
+      }
+    });
+
+    document.getElementById('contactForm').addEventListener('submit', e => {
+      e.preventDefault();
+      const button = e.target.querySelector('button');
+      button.innerHTML = 'Dziękujemy — odezwiemy się <span>✓</span>';
+      button.style.background = '#158ec6';
+      e.target.reset();
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#09090b">
+
+  <title>Polityka prywatności | Dr. Shine</title>
+  <meta name="description" content="Polityka prywatności serwisu Dr. Shine — mobilny detailing samochodów w Łodzi. Informacje o przetwarzaniu danych osobowych i plikach cookies.">
+  <meta name="author" content="Inne — Shine &amp; Splash">
+  <link rel="canonical" href="https://shineandsplash.pl/polityka-prywatnosci.html">
+
+  <meta property="og:title" content="Polityka prywatności | Dr. Shine">
+  <meta property="og:description" content="Informacje o przetwarzaniu danych osobowych i plikach cookies w serwisie Dr. Shine.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://shineandsplash.pl/polityka-prywatnosci.html">
+  <meta property="og:locale" content="pl_PL">
+  <meta property="og:site_name" content="Shine &amp; Splash">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary: #3a3cdf;
+      --secondary: #158ec6;
+      --accent: #f59e0b;
+      --background: #09090b;
+      --text: #fafafa;
+      --muted: #a1a1aa;
+      --surface: #111116;
+      --line: rgba(250,250,250,.13);
+      --blue-glow: rgba(58,60,223,.28);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--background);
+      color: var(--text);
+      font-family: "Manrope", sans-serif;
+      overflow-x: hidden;
+    }
+    body::before {
+      content: "";
+      position: fixed; inset: 0; pointer-events: none; opacity: .04; z-index: 10;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.8'/%3E%3C/svg%3E");
+    }
+    ::selection { background: var(--accent); color: #111; }
+    ::-webkit-scrollbar { width: 9px; }
+    ::-webkit-scrollbar-track { background: var(--background); }
+    ::-webkit-scrollbar-thumb { background: var(--primary); border-radius: 10px; }
+    a { color: inherit; text-decoration: none; }
+    .container { width: min(1160px, calc(100% - 48px)); margin: auto; }
+    .eyebrow {
+      display: flex; align-items: center; gap: 10px; color: var(--accent);
+      font: 500 .72rem "DM Mono", monospace; text-transform: uppercase; letter-spacing: .12em;
+    }
+    .eyebrow::before { content: ""; width: 30px; height: 1px; background: var(--accent); }
+
+    header {
+      position: fixed; z-index: 20; top: 0; left: 0; width: 100%; padding: 13px 0;
+      background: rgba(9,9,11,.82); backdrop-filter: blur(18px); border-bottom: 1px solid var(--line);
+      transition: .35s ease;
+    }
+    .nav { display: flex; align-items: center; justify-content: space-between; }
+    .logo { font-size: 1.35rem; font-weight: 800; letter-spacing: -.08em; }
+    .logo span { color: var(--accent); }
+    .nav-links { display: flex; gap: 30px; align-items: center; font-size: .8rem; color: #d4d4d8; }
+    .nav-links a { transition: color .25s, transform .25s; }
+    .nav-links a:hover { color: var(--accent); transform: translateY(-2px); }
+    .nav-cta { border: 1px solid var(--line); padding: 10px 15px; border-radius: 2px; }
+    .nav-cta:hover { border-color: var(--accent); }
+    .menu { display:none; background:none; color:white; border:0; font-size:1.5rem; }
+
+    main { position: relative; }
+    .legal-page {
+      min-height: 100vh;
+      padding: 155px 0 135px;
+      background:
+        radial-gradient(ellipse at 100% 0%, rgba(58,60,223,.12), transparent 36%),
+        linear-gradient(145deg, #10101a, #09090b 70%);
+      scroll-margin-top: 72px;
+    }
+    .legal-wrap { max-width: 900px; }
+    .legal-kicker { color:var(--accent); font: .7rem "DM Mono"; letter-spacing:.12em; text-transform:uppercase; }
+    .legal-page h1 { font-size:clamp(2.7rem, 6vw, 5rem); letter-spacing:-.08em; line-height:.94; margin:20px 0 18px; }
+    .legal-updated { color:var(--muted); font: .75rem "DM Mono"; margin:0 0 42px; }
+    .legal-content { border-top:1px solid var(--line); padding-top:28px; }
+    .legal-content h2 { color:var(--text); font-size:1.25rem; letter-spacing:-.04em; margin:32px 0 10px; }
+    .legal-content p, .legal-content li { color:#c5c5ca; font-size:.92rem; line-height:1.8; }
+    .legal-content p { margin:0 0 14px; }
+    .legal-content ul { padding-left:22px; margin:8px 0 18px; }
+    .legal-content li { padding-left:4px; margin:5px 0; }
+    .legal-content a { color:var(--accent); text-decoration:underline; text-underline-offset:3px; }
+    .legal-return { display:inline-flex; margin-top:34px; color:var(--accent); font: .72rem "DM Mono"; text-transform:uppercase; letter-spacing:.06em; }
+    .legal-return:hover { color:#fff; }
+
+    footer { border-top:1px solid var(--line); padding:32px 0; color:var(--muted); font-size:.75rem; }
+    .footer-wrap { display:flex; justify-content:space-between; gap:20px; }
+    .footer-links { display:flex; gap:22px; }
+    .footer-links a:hover { color:var(--accent); }
+
+    @media (max-width: 800px) {
+      .container { width:min(100% - 34px, 600px); }
+      .nav-links { display:none; position:absolute; top:70px; left:17px; right:17px; background:#111116; padding:25px; flex-direction:column; align-items:flex-start; border:1px solid var(--line); }
+      .nav-links.open { display:flex; }
+      .menu { display:block; }
+      .legal-page { padding:130px 0 90px; }
+      .footer-wrap { flex-direction:column; }
+    }
+    @media (max-width: 520px) {
+      .legal-content p, .legal-content li { font-size:.86rem; }
+      .footer-links { flex-wrap:wrap; gap:14px 18px; }
+    }
+  </style>
+</head>
+<body>
+  <header id="header" class="scrolled">
+    <div class="container nav">
+      <a href="index.html" class="logo"><span><font color="#fafafa">Dr. Shine</font>®</span></a>
+      <nav class="nav-links" id="navLinks" aria-label="Główna nawigacja">
+        <a href="index.html#o-nas">O nas</a>
+        <a href="index.html#uslugi">Usługi</a>
+        <a href="index.html#realizacje">Realizacje</a>
+        <a href="index.html#cennik">Cennik</a>
+        <a href="index.html#kontakt" class="nav-cta">Zapytaj o termin ↗</a>
+      </nav>
+      <button class="menu" id="menu" aria-label="Otwórz menu" aria-expanded="false">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="legal-page">
+      <div class="container legal-wrap">
+        <div class="legal-kicker">Informacje o danych osobowych</div>
+        <h1>Polityka prywatności.</h1>
+        <p class="legal-updated">Ostatnia aktualizacja: 25.09.2026</p>
+
+        <div class="legal-content">
+          <p>Niniejsza Polityka prywatności opisuje zasady przetwarzania danych osobowych osób korzystających z serwisu internetowego Dr. Shine oraz kontaktujących się w sprawie mobilnego detailingu samochodów na terenie Łodzi. Dokument uwzględnia przepisy RODO, czyli rozporządzenia Parlamentu Europejskiego i Rady (UE) 2016/679, oraz właściwe przepisy prawa polskiego.</p>
+
+          <h2>1. Administrator danych osobowych</h2>
+          <p>Administratorem danych osobowych jest podmiot prowadzący działalność pod nazwą <strong>Inne — Shine &amp; Splash</strong>, oferujący usługi pod marką Dr. Shine (dalej: „Administrator”).</p>
+          <p>W sprawach dotyczących danych osobowych można skontaktować się z Administratorem:</p>
+          <ul>
+            <li>e-mail: <a href="mailto:drshine@gmail.com">drshine@gmail.com</a></li>
+            <li>telefon: <a href="tel:+48482038472">+48 482 038 472</a></li>
+            <li>obszar działalności: Łódź i okolice.</li>
+          </ul>
+          <p>Administrator nie wyznaczył inspektora ochrony danych. Prosimy kierować sprawy dotyczące prywatności na wskazany adres e-mail.</p>
+
+          <h2>2. Cele i podstawy przetwarzania</h2>
+          <p>Dane przetwarzamy tylko w zakresie niezbędnym do określonego celu. W zależności od sytuacji podstawą prawną jest:</p>
+          <ul>
+            <li><strong>Art. 6 ust. 1 lit. b RODO</strong> — podjęcie działań przed zawarciem umowy, na żądanie osoby, której dane dotyczą, oraz wykonanie zawartej umowy. Dotyczy to w szczególności odpowiedzi na zapytanie o usługę, ustalenia zakresu prac, wyceny i terminu oraz realizacji usługi.</li>
+            <li><strong>Art. 6 ust. 1 lit. c RODO</strong> — wypełnienie obowiązków prawnych Administratora, w tym obowiązków podatkowych i rachunkowych związanych z dokumentacją usług i rozliczeniami.</li>
+            <li><strong>Art. 6 ust. 1 lit. f RODO</strong> — prawnie uzasadniony interes Administratora, taki jak prowadzenie korespondencji, obrona lub dochodzenie roszczeń, zapewnienie bezpieczeństwa serwisu oraz ustalenie, dochodzenie lub obrona przed roszczeniami.</li>
+            <li><strong>Art. 6 ust. 1 lit. a RODO</strong> — zgoda, jeżeli jest wymagana dla konkretnego działania, na przykład dla opcjonalnych plików cookies lub komunikacji marketingowej. Zgodę można wycofać w dowolnym momencie; nie wpływa to na zgodność z prawem przetwarzania sprzed jej wycofania.</li>
+          </ul>
+          <p>Podanie danych jest dobrowolne, ale w zakresie potrzebnym do obsługi zapytania lub wykonania umowy może być konieczne. Brak tych danych może uniemożliwić udzielenie odpowiedzi, przygotowanie wyceny albo realizację usługi. Administrator nie podejmuje wobec użytkowników decyzji wyłącznie w sposób zautomatyzowany, w tym nie prowadzi profilowania wywołującego skutki prawne lub podobnie istotne skutki.</p>
+
+          <h2>3. Odbiorcy danych</h2>
+          <p>Dane mogą być udostępniane wyłącznie w zakresie potrzebnym do realizacji wskazanych celów. Odbiorcami mogą być w szczególności dostawcy usług poczty elektronicznej, hostingu i utrzymania serwisu, wsparcia informatycznego, a także podmioty obsługujące księgowość lub rozliczenia — jeżeli uczestniczą w obsłudze danej sprawy. Podmioty te przetwarzają dane na podstawie odpowiednich umów lub w ramach obowiązujących przepisów.</p>
+          <p>Dane mogą być również przekazane uprawnionym organom publicznym, jeżeli obowiązek taki wynika z przepisów prawa. Administrator nie sprzedaje danych osobowych.</p>
+          <p>Serwis pobiera zewnętrzne arkusze czcionek Google Fonts. Wczytanie czcionek może wiązać się z przekazaniem dostawcy tej usługi technicznych informacji o połączeniu, takich jak adres IP i informacje o przeglądarce. Szczegóły przetwarzania przez Google znajdują się w polityce prywatności Google.</p>
+
+          <h2>4. Okres przechowywania danych</h2>
+          <p>Dane przechowujemy nie dłużej, niż jest to potrzebne do celu, w jakim zostały zebrane, z uwzględnieniem obowiązków prawnych i terminów przedawnienia roszczeń:</p>
+          <ul>
+            <li>dane z zapytań, które nie doprowadziły do zawarcia umowy — przez czas obsługi sprawy, a następnie co do zasady do 12 miesięcy, chyba że dalsze przechowywanie jest uzasadnione obroną lub dochodzeniem roszczeń;</li>
+            <li>dane związane z umową i rozliczeniami — przez okres wymagany przepisami podatkowymi i rachunkowymi, co do zasady przez okresy wskazane w tych przepisach;</li>
+            <li>dane potrzebne do ustalenia, dochodzenia lub obrony roszczeń — do upływu właściwego terminu przedawnienia albo do zakończenia postępowania;</li>
+            <li>dane przetwarzane na podstawie zgody — do czasu jej wycofania, o ile nie zachodzi inna podstawa prawna dalszego przechowywania.</li>
+          </ul>
+          <p>Po upływie właściwego okresu dane są usuwane lub anonimizowane, chyba że dalsze ich przechowywanie jest wymagane przez prawo.</p>
+
+          <h2>5. Prawa osób, których dane dotyczą (RODO)</h2>
+          <p>W granicach i na warunkach przewidzianych przez RODO przysługuje Ci prawo do:</p>
+          <ul>
+            <li>dostępu do swoich danych oraz otrzymania ich kopii;</li>
+            <li>sprostowania danych nieprawidłowych lub uzupełnienia danych niekompletnych;</li>
+            <li>usunięcia danych („prawo do bycia zapomnianym”), jeśli zachodzą przesłanki określone w RODO;</li>
+            <li>ograniczenia przetwarzania danych;</li>
+            <li>przenoszenia danych — w zakresie, w jakim przetwarzanie odbywa się na podstawie zgody lub umowy i w sposób zautomatyzowany;</li>
+            <li>wniesienia sprzeciwu wobec przetwarzania opartego na prawnie uzasadnionym interesie Administratora, z przyczyn związanych z Twoją szczególną sytuacją;</li>
+            <li>wycofania zgody w dowolnym momencie, jeżeli dane są przetwarzane na jej podstawie.</li>
+          </ul>
+          <p>Aby skorzystać z praw, skontaktuj się z Administratorem pod adresem <a href="mailto:drshine@gmail.com">drshine@gmail.com</a>. Masz również prawo wnieść skargę do Prezesa Urzędu Ochrony Danych Osobowych, ul. Stawki 2, 00-193 Warszawa, jeśli uznasz, że przetwarzanie narusza przepisy o ochronie danych osobowych. Aktualne informacje o sposobie składania skarg są dostępne na stronie <a href="https://uodo.gov.pl/" target="_blank" rel="noopener noreferrer">uodo.gov.pl</a>.</p>
+
+          <h2>6. Pliki cookies</h2>
+          <p>Pliki cookies to niewielkie informacje zapisywane na urządzeniu użytkownika przez przeglądarkę. Mogą być wykorzystywane do prawidłowego działania serwisu lub zapamiętywania ustawień.</p>
+          <p>Serwis nie wykorzystuje obecnie cookies do analityki ani reklamy. Jeśli w przyszłości zostaną uruchomione opcjonalne cookies wymagające zgody, będą stosowane dopiero po jej uzyskaniu. Niezbędne technologie, o ile są używane do dostarczenia usługi żądanej przez użytkownika lub zapewnienia działania serwisu, mogą być stosowane bez zgody zgodnie z obowiązującymi przepisami.</p>
+          <p>Ustawienia przeglądarki pozwalają blokować lub usuwać cookies. Ograniczenie niektórych technologii może wpłynąć na działanie serwisu. Samo pobieranie zewnętrznych czcionek Google Fonts opisane wyżej nie oznacza automatycznie zapisywania plików cookies przez tę stronę.</p>
+
+          <h2>7. Zmiany polityki prywatności</h2>
+          <p>Polityka może być aktualizowana w przypadku zmian w działaniu serwisu, sposobach przetwarzania danych lub obowiązujących przepisach. Aktualna wersja jest publikowana na tej stronie.</p>
+
+          <a class="legal-return" href="index.html">← Wróć na stronę główną</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-wrap">
+      <div>© 2026 Dr. Shine — mobilny detailing samochodów</div>
+      <div class="footer-links">
+        <a href="polityka-prywatnosci.html">Polityka prywatności</a>
+        <a href="regulamin.html">Regulamin</a>
+        <a href="index.html#kontakt">Kontakt</a>
+        <a href="index.html">Strona główna ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const menu = document.getElementById('menu');
+    const nav = document.getElementById('navLinks');
+
+    menu.addEventListener('click', () => {
+      const isOpen = nav.classList.toggle('open');
+      menu.setAttribute('aria-expanded', String(isOpen));
+    });
+
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        nav.classList.remove('open');
+        menu.setAttribute('aria-expanded', 'false');
+      });
+    });
+  </script>
+</body>
+</html>
